@@ -11,3 +11,9 @@ openMenu.addEventListener("click", () => {
 closeMenu.addEventListener("click", () => {
   menu.classList.remove("active");
 });
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    menu.classList.remove("active");
+  }
+});
