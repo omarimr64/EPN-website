@@ -44,11 +44,6 @@ header nav .close {
   font-size: 45px;
 }
 
-header nav .bars:hover,
-header nav .close:hover {
-  color: var(--alt-text-dark);
-}
-
 header nav ul {
   display: flex;
   gap: 38px;
