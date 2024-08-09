@@ -1,0 +1,61 @@
+/* Start variables */
+
+:root {
+  --background-dark: #000c18;
+  --gradient-dark: linear-gradient(122.26deg, #000c18 5.78%, #021426 89.2%);
+  --alt-text-dark: #fc7f00;
+  --cards-dark: #3e3e3e;
+  --footer-dark: #1774d3;
+}
+
+/* End variables */
+
+/* Start global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End global rules */
