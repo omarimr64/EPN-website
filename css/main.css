@@ -1,0 +1,213 @@
+/* Start header */
+
+header {
+  color: white;
+  overflow: hidden;
+}
+
+header .background {
+  background-color: var(--background-dark);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  left: 0;
+  overflow: hidden;
+}
+
+header .background img {
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 0;
+}
+
+header nav .logo img {
+  width: 248.94px;
+  max-width: 100%;
+}
+
+header nav .bars,
+header nav .close {
+  display: none;
+  font-size: 35px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+
+header nav .close {
+  font-size: 45px;
+}
+
+header nav .bars:hover,
+header nav .close:hover {
+  color: var(--alt-text-dark);
+}
+
+header nav ul {
+  display: flex;
+  gap: 38px;
+  font-size: 20.88px;
+  font-weight: 600;
+  line-height: 31.32px;
+  text-transform: capitalize;
+}
+
+header nav ul span {
+  display: none;
+}
+
+header nav li a {
+  transition: color var(--main-transition);
+}
+
+header nav li a:hover {
+  color: var(--alt-text-dark);
+}
+
+header .landing {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+header .landing .content .text {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 91.02px;
+  width: 648px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+header .landing .buttons a {
+  padding: 8.5px 20.4px;
+  border-radius: 11.9px;
+  font-size: 22.19px;
+  font-weight: 600;
+  border: 0.85px solid #ffffff;
+  transition: background-color var(--main-transition),
+    border-color var(--main-transition), color var(--main-transition);
+}
+
+header .landing .buttons a:first-child {
+  color: var(--background-dark);
+  background-color: white;
+  margin-right: 15px;
+}
+
+header .landing .buttons a:hover {
+  background-color: var(--alt-text-dark);
+  border-color: var(--alt-text-dark);
+  color: white;
+}
+
+header .landing .atom img {
+  width: 570px;
+  max-width: 100%;
+}
+
+@media (max-width: 1400px) {
+  header .landing .content .text {
+    font-size: 40.99px;
+    line-height: 61.49px;
+  }
+}
+
+@media (max-width: 992px) {
+  header .landing {
+    flex-direction: column-reverse;
+    gap: 60px;
+    text-align: center;
+  }
+  header nav {
+    gap: 10px;
+    position: relative;
+  }
+
+  header nav ul {
+    background-color: var(--alt-text-dark);
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    gap: 40px;
+    font-size: 45px;
+    font-weight: 500;
+    transition: var(--main-transition);
+    line-height: 40px;
+  }
+
+  header nav ul.active {
+    right: 0;
+  }
+
+  header nav ul span {
+    display: block;
+    height: 121px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    border-bottom: 4px solid white;
+    font-size: 44px;
+  }
+
+  header nav li {
+    padding: 0 50px;
+  }
+
+  header nav li a:hover {
+    color: white;
+  }
+
+  header nav > .bars {
+    display: block;
+  }
+
+  header nav ul .close {
+    display: block;
+    position: absolute;
+    top: calc(121px / 2);
+    transform: translateY(-50%);
+    right: 50px;
+    z-index: 999;
+  }
+
+  header nav .bars input:checked {
+    right: 0;
+  }
+
+  header .landing .buttons a {
+    font-size: 17.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .landing .content .text {
+    font-size: 25.11px;
+    line-height: 37.67px;
+    width: 100%;
+  }
+
+  header .landing .buttons a {
+    display: block;
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  header .landing .buttons a:first-child {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/* End header */
