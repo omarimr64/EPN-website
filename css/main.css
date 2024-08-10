@@ -24,8 +24,8 @@ header .background {
 
 header .background img {
   width: 4983px;
-  opacity: 0.2;
-  mix-blend-mode: color-dodge;
+  opacity: 0.3;
+  mix-blend-mode: luminosity;
 }
 
 header nav {
@@ -255,6 +255,11 @@ header .landing .atom img {
   header nav ul span {
     padding: 0 20px;
   }
+
+  header nav .bars {
+    font-size: 23px;
+  }
+
   header .landing {
     padding: 15px 0 30px;
   }
@@ -361,9 +366,9 @@ header .landing .atom img {
   }
 
   .info p {
-    font-size: 10.18px;
-    font-weight: 500;
-    line-height: 15.28px;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 20px;
   }
 
   .info .cards-container {
