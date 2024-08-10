@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EPN</title>
+    <title>The Egyptian Physics Network</title>
+    <!-- Website icon -->
+    <link rel="icon" href="images/icon.jpg" />
     <!-- normalize library -->
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- font awesome library -->
@@ -26,12 +28,11 @@
       <div class="background">
         <img src="images/Landing background.jpg" class="background" />
       </div>
-      <div class="container">
-        <nav>
+      <nav>
+        <div class="container">
           <div class="logo">
             <a href="#">
               <img src="images/logo 1.png" alt="EPN logo" />
-              <img src="images/logo 2.png" alt="EPN logo" />
             </a>
           </div>
           <div class="bars">
@@ -39,7 +40,7 @@
           </div>
           <ul>
             <span>menu</span>
-            <li><a href="#">Home</a></li>
+            <li><a class="active" href="#">Home</a></li>
             <li><a href="#">join us</a></li>
             <li><a href="#">about us</a></li>
             <li><a href="#">contact us</a></li>
@@ -48,9 +49,11 @@
               <i class="fa-solid fa-xmark"></i>
             </div>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-        <section class="landing">
+      <section class="landing">
+        <div class="container">
           <div class="content">
             <div class="text">
               join the largest physics community all over egypt!
@@ -63,10 +66,61 @@
           <div class="atom">
             <img src="images/atom.png" alt="Atom" />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </header>
     <!-- End header -->
+
+    <!-- Start info -->
+
+    <section class="info">
+      <div class="container">
+        <h2>the egyptian physics network</h2>
+        <p>
+          In a world where science and technology are advancing rapidly , the
+          Egyptian Physics Network emerged as an inspiring non-profit initiative
+          founded by a group of school and university students in Egypt . The
+          network aims to address the shortage of available scientific
+          activities by providing an online educational community that all
+          students can join, regardless of their academic background, age, or
+          financial conditions . Whether you are a beginner in physics or an
+          expert, the network provides you with the tools and resources needed
+          to enhance your knowledge and skills . The network offers a range of
+          innovative activities, training, and competitions that foster an
+          understanding of physics and astronomy in a unique way.
+        </p>
+        <div class="cards-container">
+          <a href="#">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              Community
+            </div>
+          </a>
+          <a href="#">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              Activities
+            </div>
+          </a>
+          <a href="#">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-regular fa-calendar-check"></i>
+              </div>
+              Events
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- End info -->
+
+    <div class="test" style="height: 12000px"></div>
 
     <script src="js/main.js"></script>
   </body>
