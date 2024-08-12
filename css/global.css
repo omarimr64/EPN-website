@@ -95,4 +95,18 @@ a {
   padding: var(--section-padding) 0;
 }
 
+.special-heading {
+  font-size: 40.73px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.special-paragraph {
+  font-size: 20.51px;
+  font-weight: 400;
+  line-height: 30.76px;
+  margin-bottom: 40px;
+}
+
 /* End specials */
