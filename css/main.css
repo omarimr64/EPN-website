@@ -23,7 +23,7 @@ header .background {
 }
 
 header .background img {
-  width: 4983px;
+  object-fit: cover;
   opacity: 0.3;
   mix-blend-mode: luminosity;
 }
@@ -293,13 +293,6 @@ header .landing .atom img {
 
 /* Start info */
 
-.info {
-  background: var(--gradient-dark);
-  text-align: center;
-  color: white;
-  padding: var(--section-padding) 0;
-}
-
 .info h2 {
   font-size: 40.73px;
   text-transform: uppercase;
@@ -388,3 +381,126 @@ header .landing .atom img {
 }
 
 /* End info */
+
+/* Start community */
+
+.community {
+  padding: 150px 0;
+}
+
+.community .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-align: left;
+}
+
+.community .community-image {
+  width: 514px;
+  height: 446px;
+  border-radius: 30px;
+  overflow: hidden;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.community .community-image img {
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+}
+
+.community .description {
+  width: 700px;
+}
+
+.community .description h2 {
+  font-size: 53.74px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.community .description p {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+@media (max-width: 1400px) {
+  .community .description h2 {
+    font-size: 38px;
+  }
+
+  .community .description p {
+    font-size: 23px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .community .description h2 {
+    font-size: 33px;
+  }
+
+  .community .description p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .community .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .community .description {
+    width: 100%;
+  }
+}
+
+/* End community */
+
+/* Start stats */
+
+.stats {
+  background-color: white;
+  color: var(--alt-text-dark);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.stats .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats .container > div {
+  font-size: 69.83px;
+  font-weight: 600;
+}
+
+.stats .container > div span {
+  display: block;
+  font-size: 30px;
+}
+
+@media (max-width: 992px) {
+  .stats .container > div {
+    font-size: 50px;
+  }
+
+  .stats .container > div span {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+/* End stats */

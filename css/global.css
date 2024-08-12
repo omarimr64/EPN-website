@@ -85,3 +85,14 @@ a {
 }
 
 /* End global rules */
+
+/* Start specials */
+
+.special-section {
+  background: var(--gradient-dark);
+  text-align: center;
+  color: white;
+  padding: var(--section-padding) 0;
+}
+
+/* End specials */
