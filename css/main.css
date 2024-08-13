@@ -94,6 +94,7 @@ header nav li a.active {
 header nav.sticky {
   background-color: #021426;
 }
+
 header .landing {
   padding: var(--section-padding) 0;
 }
@@ -289,6 +290,7 @@ header .landing .atom img {
     width: 300px;
   }
 }
+
 /* End header */
 
 /* Start info */
@@ -460,22 +462,22 @@ header .landing .atom img {
   justify-content: space-around;
 }
 
-.stats .container > div {
+.stats .container>div {
   font-size: 69.83px;
   font-weight: 600;
 }
 
-.stats .container > div span {
+.stats .container>div span {
   display: block;
   font-size: 30px;
 }
 
 @media (max-width: 992px) {
-  .stats .container > div {
+  .stats .container>div {
     font-size: 50px;
   }
 
-  .stats .container > div span {
+  .stats .container>div span {
     font-size: 25px;
   }
 }
@@ -501,7 +503,7 @@ header .landing .atom img {
   margin-top: 50px;
 }
 
-.activities .container > p {
+.activities .container>p {
   margin-bottom: 100px;
 }
 
@@ -563,7 +565,7 @@ header .landing .atom img {
   margin-left: -100px;
 }
 
-.asteroids .asteroids-image > img {
+.asteroids .asteroids-image>img {
   position: absolute;
   top: -140px;
   left: -100px;
@@ -575,6 +577,7 @@ header .landing .atom img {
   text-align: left;
   width: 700px;
 }
+
 .asteroids .description h3 {
   font-size: 35px;
   font-weight: 500;
@@ -630,7 +633,7 @@ header .landing .atom img {
     margin: 0;
   }
 
-  .asteroids .asteroids-image > img {
+  .asteroids .asteroids-image>img {
     width: 300px;
     top: -100px;
     left: -50px;
@@ -641,7 +644,30 @@ header .landing .atom img {
 
 /* End activities */
 
-@media (max-width: 992px) {
+/* Start Footer */
+footer {
+  background-color: var(--footer-dark);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+footer .container {
+  display: flex;
+}
+
+footer .container .info {
+  flex: 1;
+  position: relative;
+  color: #ffffff;
+  padding-right: 40px;
+  border-right: solid 2px #ffffff;
+}
+
+footer .container .info h3 {}
+
+/* End Footer */
+
+satrt footer Satrt Footer @media (max-width: 992px) {
   .videos .video-wrapper:not(:first-of-type) {
     display: none;
   }
