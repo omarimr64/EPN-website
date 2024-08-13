@@ -35,6 +35,7 @@ header nav {
   width: 100%;
   transition: var(--main-transition);
   padding: 15px;
+  z-index: 2;
 }
 
 header nav .container {
@@ -659,11 +660,125 @@ footer .container .info {
   flex: 1;
   position: relative;
   color: #ffffff;
-  padding-right: 40px;
-  border-right: solid 2px #ffffff;
+  padding-right: 70px;
 }
 
-footer .container .info h3 {}
+footer .container .info h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 39px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+}
+
+footer .container .info p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+footer .container .info .social {
+  display: flex;
+  gap: 15px;
+}
+
+footer .container .info .social i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+footer .container .info .social i:hover {
+  color: var(--background-dark);
+}
+
+footer .container .contact {
+  position: relative;
+  flex: 1;
+  padding-left: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer .container .contact::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 90%;
+  left: -1.5px;
+  /* top: 30px; */
+  bottom: 0;
+  background-color: white;
+}
+
+footer .container .contact h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+footer .container .contact input,
+footer .container .contact textarea {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  min-width: 90%;
+}
+
+footer .container .contact textarea {
+  resize: none;
+  min-height: 200px;
+}
+
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer .container .info {
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 70px;
+  }
+
+  footer .container .contact {
+    padding-left: 0;
+  }
+
+  footer .container .contact::before {
+    display: none;
+  }
+
+  footer .container h3,
+  footer .container .info .social,
+  footer .container .contact {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+footer .logo {
+  text-align: center;
+  padding: 70px 70px 0;
+}
+
+footer .logo img {
+  max-width: 200px;
+}
 
 /* End Footer */
 

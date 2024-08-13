@@ -47,6 +47,18 @@ a {
   user-select: none;
 }
 
+*:focus {
+  outline: none;
+}
+
+::placeholder {
+  transition: var(--main-transition);
+}
+
+*:focus::placeholder {
+  opacity: 0;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -111,7 +123,5 @@ a {
 
 /* End specials */
 
-.f-column {
-  display: flex;
-  flex-direction: column;
-}
+/* Start General */
+/* End General */
