@@ -34,7 +34,7 @@ header nav {
   right: 0;
   width: 100%;
   transition: var(--main-transition);
-  padding: 15px;
+  padding: 15px 0;
   z-index: 999;
 }
 
@@ -303,7 +303,7 @@ header .landing .atom img {
 .info .card {
   padding: 40px 0;
   background-color: var(--cards-dark);
-  border-radius: 25px;
+  border-radius: var(--border-radius-card);
   font-size: 30px;
   font-weight: 500;
   display: flex;
@@ -337,6 +337,14 @@ header .landing .atom img {
     font-weight: 500;
     line-height: 17.67px;
   }
+
+  .info .card {
+    font-size: 25px;
+  }
+
+  .info .card .icon {
+    font-size: 35px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -359,7 +367,6 @@ header .landing .atom img {
   .info .card {
     padding: 20px 0;
     font-size: 21.34px;
-    border-radius: 15px;
   }
 
   .info .card .icon {
@@ -372,10 +379,6 @@ header .landing .atom img {
 
 /* Start community */
 
-.community {
-  padding: 150px 0;
-}
-
 .community .container {
   display: flex;
   align-items: center;
@@ -383,19 +386,10 @@ header .landing .atom img {
   text-align: left;
 }
 
-.community .community-image {
+.community img {
   width: 514px;
-  height: 446px;
-  border-radius: 30px;
-  overflow: hidden;
-  flex-shrink: 0;
   max-width: 100%;
-}
-
-.community .community-image img {
-  width: 100%;
-  height: 100%;
-  min-width: 300px;
+  border-radius: var(--border-radius-image);
 }
 
 .community .description {
@@ -431,10 +425,6 @@ header .landing .atom img {
 }
 
 @media (max-width: 992px) {
-  .community .community-image {
-    height: 300px;
-  }
-
   .community .container {
     flex-direction: column;
     text-align: center;
@@ -496,27 +486,20 @@ header .landing .atom img {
   background-color: var(--background-dark);
   background-image: url(../images/pattern.png);
   background-attachment: fixed;
+  padding: 0;
 }
 
 .activities h2 {
-  margin-top: 50px;
+  padding-top: 100px;
 }
 
-.activities .container > p {
+.activities .activities-des {
   margin-bottom: 100px;
 }
 
 /* Start videos */
 
-.activities .videos {
-  background: var(--gradient-dark);
-  padding: 100px 0;
-}
-
 .activities .videos h3 {
-  font-size: 35px;
-  font-weight: 500;
-  text-transform: capitalize;
   margin-bottom: 80px;
 }
 
@@ -538,7 +521,7 @@ header .landing .atom img {
 /* Start asteroids */
 
 .asteroids {
-  padding: 200px 0 100px;
+  padding-top: 200px;
 }
 
 .asteroids .container {
@@ -548,26 +531,15 @@ header .landing .atom img {
 }
 
 .asteroids .asteroids-image {
-  width: 514px;
-  height: 446px;
-  flex-shrink: 0;
   position: relative;
-  max-width: 100%;
 }
 
 .asteroids .asteroids-image .cover {
-  border-radius: 61px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  border-radius: var(--border-radius-image);
+  max-width: 100%;
 }
 
-.asteroids .asteroids-image .cover img {
-  height: 100%;
-  margin-left: -100px;
-}
-
-.asteroids .asteroids-image > img {
+.asteroids .asteroids-image .asteroid-png {
   position: absolute;
   top: -140px;
   left: -100px;
@@ -578,12 +550,6 @@ header .landing .atom img {
 .asteroids .description {
   text-align: left;
   width: 700px;
-}
-.asteroids .description h3 {
-  font-size: 35px;
-  font-weight: 500;
-  text-transform: capitalize;
-  margin-bottom: 20px;
 }
 
 .asteroids .description p {
@@ -626,15 +592,11 @@ header .landing .atom img {
 }
 
 @media (max-width: 768px) {
-  .asteroids .asteroids-image {
-    height: 300px;
+  .asteroids {
+    padding-top: 120px;
   }
 
-  .asteroids .asteroids-image .cover img {
-    margin: 0;
-  }
-
-  .asteroids .asteroids-image > img {
+  .asteroids .asteroids-image .asteroid-png {
     width: 300px;
     top: -100px;
     left: -50px;
@@ -642,6 +604,94 @@ header .landing .atom img {
 }
 
 /* End asteroids */
+
+/* Start articles */
+
+.activities .articles .article-box {
+  border-radius: 60px;
+  box-shadow: 22.27px -22.27px 22.27px 0px #a5a5a528 inset,
+    -22.27px 22.27px 22.27px 0px #ffffff28 inset;
+  background: #d9d9d928;
+  max-width: 100%;
+  width: 950px;
+  min-height: 242px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 40px;
+  padding: 30px;
+  position: relative;
+}
+
+.activities .articles .article-box::before {
+  content: "";
+  width: 50vw;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    to right,
+    white 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: center;
+  background-size: 30px 1px;
+  background-repeat: repeat-x;
+}
+
+.activities .articles .article-box::after {
+  content: "";
+  width: 50vw;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+  background-image: linear-gradient(
+    to right,
+    white 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: center;
+  background-size: 35px 1px;
+  background-repeat: repeat-x;
+}
+
+.activities .articles .article-box p {
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.activities .articles .full-article {
+  padding: 9px 21px;
+  border-radius: 11px;
+  box-shadow: -22.27px 22.27px 22.27px 0px #ffffff28 inset,
+    22.27px -22.27px 22.27px 0px #a5a5a528 inset;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: var(--main-transition);
+}
+
+.activities .articles .full-article:hover {
+  background-color: var(--alt-text-dark);
+}
+
+@media (max-width: 768px) {
+  .activities .articles .article-box {
+    border-radius: var(--border-radius-image);
+    margin-top: 50px;
+  }
+
+  .activities .articles .article-box::after,
+  .activities .articles .article-box::before {
+    display: none;
+  }
+}
+
+/* End articles */
 
 /* End activities */
 

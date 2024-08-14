@@ -7,12 +7,16 @@
   --cards-dark: #2f2f2ff5;
   --footer-dark: #1774d3;
   --main-transition: 0.3s;
-  --section-padding: 80px;
+  --section-padding: 100px;
+  --border-radius-image: 30px;
+  --border-radius-card: 20px;
 }
 
 @media (max-width: 768px) {
   :root {
     --section-padding: 40px;
+    --border-radius-image: 20px;
+    --border-radius-card: 10px;
   }
 }
 
@@ -103,10 +107,17 @@ a {
 }
 
 .special-paragraph {
-  font-size: 20.51px;
+  font-size: 21px;
   font-weight: 400;
   line-height: 30.76px;
   margin-bottom: 40px;
+}
+
+.activity-heading {
+  font-size: 35px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 20px;
 }
 
 /* End specials */
