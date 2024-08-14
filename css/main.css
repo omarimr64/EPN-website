@@ -453,22 +453,22 @@ header .landing .atom img {
   justify-content: space-around;
 }
 
-.stats .container>div {
+.stats .container > div {
   font-size: 69.83px;
   font-weight: 600;
 }
 
-.stats .container>div span {
+.stats .container > div span {
   display: block;
   font-size: 30px;
 }
 
 @media (max-width: 992px) {
-  .stats .container>div {
+  .stats .container > div {
     font-size: 50px;
   }
 
-  .stats .container>div span {
+  .stats .container > div span {
     font-size: 25px;
   }
 }
@@ -516,6 +516,12 @@ header .landing .atom img {
   border-radius: 25px;
   overflow: hidden;
   background-color: var(--cards-dark);
+}
+
+@media (max-width: 992px) {
+  .videos .video-wrapper:not(:first-of-type) {
+    display: none;
+  }
 }
 
 /* End videos */
@@ -724,7 +730,7 @@ footer .container .info h3 {
   align-items: center;
   text-transform: capitalize;
   margin-bottom: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 footer .container .info p {
@@ -780,7 +786,7 @@ footer .container .contact h3 {
   align-items: center;
   text-align: center;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 footer .container .contact input,
@@ -833,9 +839,3 @@ footer .logo img {
 }
 
 /* End Footer */
-
-satrt footer Satrt Footer @media (max-width: 992px) {
-  .videos .video-wrapper:not(:first-of-type) {
-    display: none;
-  }
-}
