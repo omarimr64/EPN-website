@@ -51,6 +51,18 @@ a {
   user-select: none;
 }
 
+*:focus {
+  outline: none;
+}
+
+::placeholder {
+  transition: var(--main-transition);
+}
+
+*:focus::placeholder {
+  opacity: 0;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -121,3 +133,6 @@ a {
 }
 
 /* End specials */
+
+/* Start General */
+/* End General */
