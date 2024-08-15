@@ -706,8 +706,8 @@ header .landing .atom img {
 /* Start Footer */
 footer {
   background-color: var(--footer-dark);
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding: var(--section-padding) 0 50px;
+  color: white;
 }
 
 footer .container {
@@ -717,29 +717,22 @@ footer .container {
 footer .container .info {
   flex: 1;
   position: relative;
-  color: #ffffff;
   padding-right: 70px;
 }
 
 footer .container .info h3 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 39px;
-  display: flex;
-  align-items: center;
+  font-weight: 600;
+  font-size: 35px;
   text-transform: capitalize;
   margin-bottom: 15px;
-  color: #ffffff;
 }
 
 footer .container .info p {
-  font-style: normal;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 24px;
   text-transform: capitalize;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 footer .container .info .social {
@@ -748,7 +741,7 @@ footer .container .info .social {
 }
 
 footer .container .info .social i {
-  font-size: 22px;
+  font-size: 25px;
   cursor: pointer;
   transition: var(--main-transition);
 }
@@ -772,29 +765,47 @@ footer .container .contact::before {
   width: 3px;
   height: 90%;
   left: -1.5px;
-  /* top: 30px; */
   bottom: 0;
   background-color: white;
 }
 
 footer .container .contact h3 {
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 35px;
-  line-height: 53px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: capitalize;
-  color: #ffffff;
+  margin-bottom: 15px;
 }
 
-footer .container .contact input,
+footer .container .contact input:not([type="submit"]),
 footer .container .contact textarea {
-  padding: 10px 20px;
+  padding: 15px;
   border: none;
-  border-radius: 15px;
-  min-width: 90%;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 500;
+}
+
+footer .container .contact input:not([type="submit"])::placeholder,
+footer .container .contact textarea::placeholder {
+  font-size: 15.54px;
+  font-weight: 500;
+  line-height: 23.3px;
+}
+
+footer .container .contact input[type="submit"] {
+  padding: 9px 21px;
+  border-radius: 5px;
+  width: fit-content;
+  font-weight: 600;
+  border: none;
+  font-size: 18px;
+  color: var(--footer-dark);
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+
+footer .container .contact input[type="submit"]:hover {
+  background-color: var(--background-dark);
 }
 
 footer .container .contact textarea {
@@ -802,7 +813,7 @@ footer .container .contact textarea {
   min-height: 200px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   footer .container {
     flex-direction: column;
   }
@@ -827,15 +838,25 @@ footer .container .contact textarea {
     justify-content: center;
     align-items: center;
   }
+
+  footer .container .contact input[type="submit"] {
+    width: 100%;
+  }
 }
 
 footer .logo {
   text-align: center;
-  padding: 70px 70px 0;
+  margin-top: 100px;
 }
 
 footer .logo img {
-  max-width: 200px;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  footer .logo img {
+    max-width: 200px;
+  }
 }
 
 /* End Footer */
