@@ -22,7 +22,7 @@ header .background {
   overflow: hidden;
 }
 
-header .background img {
+header .background video {
   object-fit: cover;
   opacity: 0.3;
   mix-blend-mode: luminosity;
@@ -34,7 +34,7 @@ header nav {
   right: 0;
   width: 100%;
   transition: var(--main-transition);
-  padding: 15px 0;
+  padding: 10px 0;
   z-index: 999;
 }
 
@@ -45,7 +45,7 @@ header nav .container {
 }
 
 header nav .logo img {
-  width: 248.83px;
+  width: 210px;
   max-width: 100%;
 }
 
@@ -68,7 +68,6 @@ header nav .close {
 header nav ul {
   display: flex;
   gap: 38px;
-  font-size: 20.88px;
   font-weight: 600;
   line-height: 31.32px;
   text-transform: capitalize;
@@ -93,7 +92,7 @@ header nav li a.active {
 }
 
 header nav.sticky {
-  background-color: #021426;
+  background-color: rgb(2, 20, 38, 80%);
 }
 
 header .landing {
