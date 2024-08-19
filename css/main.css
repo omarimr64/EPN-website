@@ -24,8 +24,8 @@ header .background {
 
 header .background video {
   object-fit: cover;
-  opacity: 0.3;
-  mix-blend-mode: luminosity;
+  opacity: 0.45;
+  /* mix-blend-mode: luminosity; */
 }
 
 header nav {
@@ -73,6 +73,66 @@ header nav ul {
   text-transform: capitalize;
 }
 
+header nav .settings {
+  display: flex;
+  gap: 30px;
+}
+
+header nav .settings .language {
+  cursor: pointer;
+  font-weight: 800;
+  /* display: flex;
+  align-items: center;
+  gap: 5px; */
+  position: relative;
+}
+
+.overlay {
+  display: none;
+  background-color: black;
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay.active {
+  display: block;
+}
+
+header nav .settings .language .languages {
+  background-color: var(--alt-text-dark);
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  position: absolute;
+  left: -10px;
+  top: 30px;
+}
+
+header nav .settings .language .languages.active {
+  display: flex;
+}
+
+header nav .settings .languages li {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header nav .settings .languages li:hover {
+  background-color: blue;
+}
+/* 
+header nav .settings .languages li:not(.active) {
+  display: none;
+} */
+
+header nav .settings .language img {
+  width: 20px;
+}
+
 header nav ul span {
   display: none;
 }
@@ -92,7 +152,7 @@ header nav li a.active {
 }
 
 header nav.sticky {
-  background-color: rgb(2, 20, 38, 80%);
+  background-color: rgb(2, 20, 38, 95%);
 }
 
 header .landing {
@@ -701,6 +761,47 @@ header .landing .atom img {
 /* End articles */
 
 /* End activities */
+
+/* Start partners */
+
+.partners-section {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.partners-section h2 {
+  color: #9e9b9b;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+
+.partners-section .icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partners-section .icons-wrapper .icon img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .partners-section h2 {
+    font-size: 18px;
+  }
+
+  .partners-section .icons-wrapper .icon:not(:nth-child(2)) img {
+    width: 60px;
+  }
+
+  .partners-section .icons-wrapper .icon:nth-child(2) img {
+    width: 150px;
+  }
+}
+
+/* End partners */
 
 /* Start Footer */
 footer {

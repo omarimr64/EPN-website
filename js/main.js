@@ -32,3 +32,25 @@ const addSticky = function () {
   navbar.classList.toggle("sticky", window.scrollY > 0);
 };
 window.addEventListener("scroll", addSticky);
+
+// Changing language
+let language = "en";
+const activeLn = document.querySelector(
+  "header nav .settings .language .active-ln"
+);
+const flag = document.querySelector("header nav .settings .language img");
+const overlay = document.querySelector(".overlay");
+const btnLanguage = document.querySelector("header nav .settings .language");
+const languagelist = document.querySelector(
+  "header nav .settings .language .languages"
+);
+const langOptions = document.querySelectorAll(
+  "header nav .settings .language .languages li"
+);
+const languageLabel = document.querySelector(
+  "header nav .settings .language .lang"
+);
+btnLanguage.addEventListener("click", () => {
+  languagelist.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
