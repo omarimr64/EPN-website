@@ -803,6 +803,31 @@ header .landing .atom img {
 
 /* End partners */
 
+/* Start sessions */
+
+.session-wrapper {
+  width: 971px;
+  height: 446px;
+  border-radius: var(--border-radius-image);
+  overflow: hidden;
+  margin: 90px auto 0;
+  max-width: 100%;
+}
+
+.session-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .session-wrapper {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* End sessions */
+
 /* Start Footer */
 footer {
   background-color: var(--footer-dark);
